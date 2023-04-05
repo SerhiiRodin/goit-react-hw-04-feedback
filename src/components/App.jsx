@@ -11,7 +11,7 @@ export function App() {
   const [neutral, setNeutral] = useState(0);
   const [bad, setBad] = useState(0);
 
-  const state = { good, neutral, bad };
+  const feedback = { good, neutral, bad };
 
   const handleButtonClick = event => {
     const value = event.currentTarget.value;
@@ -19,27 +19,26 @@ export function App() {
 
     if (value === 'good') {
       setGood(prev => prev + 1);
-      state.good = good + 1;
+      feedback.good = good + 1;
     }
 
     if (value === 'neutral') {
       setNeutral(prev => prev + 1);
-      state.neutral = neutral + 1;
+      feedback.neutral = neutral + 1;
     }
 
     if (value === 'bad') {
       setBad(prev => prev + 1);
-      state.bad = bad + 1;
+      feedback.bad = bad + 1;
     }
-    // console.log(state);
+    // console.log(feedback);
   };
-
 
   const countTotalFeedback = () => {
     // let total = good + neutral + bad;
     // return total;
 
-    return Object.values(state).reduce((acc, value) => acc + value);
+    return Object.values(feedback).reduce((acc, value) => acc + value);
   };
 
   const countPositiveFeedbackPercentage = () => {
@@ -55,7 +54,7 @@ export function App() {
     <div className={css.container}>
       <Section title="Please leave the feedback">
         <FeedbackOptions
-          options={Object.keys(state)}
+          options={Object.keys(feedback)}
           handleButtonClick={handleButtonClick}
         />
 
