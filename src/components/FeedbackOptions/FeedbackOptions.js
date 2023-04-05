@@ -23,17 +23,3 @@ function FeedbackOptions({ options, handleButtonClick }) {
 }
 
 export default FeedbackOptions;
-
-//   return (
-//     <div className={css['button-wraper']}>
-//       <button type="button" data="good" onClick={handleButtonClick}>
-//         Good
-//       </button>
-//       <button type="button" data="neutral" onClick={handleButtonClick}>
-//         Neutral
-//       </button>
-//       <button type="button" data="bad" onClick={handleButtonClick}>
-//         Bad
-//       </button>
-//     </div>
-//   );

@@ -1,5 +1,5 @@
-import { Component, useState } from 'react';
-
+// import { Component } from 'react';
+import { useState } from 'react';
 import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
 import Notification from './Notification/Notification';
 import Section from './Section/Section';
@@ -14,7 +14,7 @@ export function App() {
   const handleButtonClick = event => {
     const value = event.currentTarget.value;
     // console.log(value);
-    
+
     if (value === 'good') {
       setGood(prev => prev + 1);
     }
